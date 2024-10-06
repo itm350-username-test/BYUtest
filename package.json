@@ -12,7 +12,7 @@
   "author": "Edwin Pacardo",
   "license": "ISC",
   "devDependencies": {
-    "jest": "^29.0.0"
+    "jest": "^29.7.0"
   },
   "dependencies": {
     "express": "^4.21.0"
