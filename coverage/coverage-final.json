@@ -1,1 +1,2 @@
-{}
+{"C:\\Users\\Pacardo Family\\Desktop\\BYU-ITM350\\SRC\\math.js": {"path":"C:\\Users\\Pacardo Family\\Desktop\\BYU-ITM350\\SRC\\math.js","statementMap":{"0":{"start":{"line":3,"column":4},"end":{"line":3,"column":17}},"1":{"start":{"line":6,"column":0},"end":{"line":6,"column":25}}},"fnMap":{"0":{"name":"add","decl":{"start":{"line":2,"column":9},"end":{"line":2,"column":12}},"loc":{"start":{"line":2,"column":19},"end":{"line":4,"column":1}},"line":2}},"branchMap":{},"s":{"0":1,"1":1},"f":{"0":1},"b":{},"_coverageSchema":"1a1c01bbd47fc00a2c39e90264f33305004495a9","hash":"64e572a7ea59da1ad64ea358bcb2a89de7a3160a"}
+}
