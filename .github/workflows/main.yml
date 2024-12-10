@@ -8,7 +8,7 @@ on:
       - closed
 
 env:
-  REPO_NAME: {username}/itm350-{build-automation}-bb
+  REPO_NAME: {epacardo}/itm350-{byu-test}-bb
 
 jobs:
   if_merged:
