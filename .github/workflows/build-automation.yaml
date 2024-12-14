@@ -1,0 +1,46 @@
+on:
+  pull_request:
+    branches: 
+      - main
+    types:
+      - closed
+
+env:
+  REPO_NAME: epacardo/itm350-byu-test-bb
+
+jobs:
+  if_merged:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-24.04  # Updated to use ubuntu-24.04
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v4
+
+      - run: |
+          echo "The PR was merged"
+
+      - run: |
+          npm install
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}  # Ensure this secret is set in your repo settings
+          password: ${{ secrets.DOCKER_PASSWORD }}  # Ensure this secret is set in your repo settings
+
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v4
+        with:
+          images: ${{ env.REPO_NAME }}
+          tags: |
+            type=sha  
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v4
+        with:
+          context: .  # Context for Docker build
+          file: ./Dockerfile  # Path to the Dockerfile
+          push: true  # Push the built image to Docker Hub
+          tags: ${{ steps.meta.outputs.tags }}  # Use tags extracted earlier
+          labels: ${{ steps.meta.outputs.labels }}  # Use labels extracted earlier
