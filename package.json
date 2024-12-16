@@ -4,9 +4,11 @@
   "description": "A simple project to demonstrate Node.js",
   "main": "server.js",
   "scripts": {
+
     "start": "node server.js",
     "test": "jest",
     "test:coverage": "jest --coverage"
+    "build": "webpack --mode production"
   },
   "keywords": [],
   "author": "Edwin Pacardo",
