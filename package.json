@@ -1,22 +1,25 @@
 {
-  "name": "my-awesome-project",
+  "name": "your-project-name",
   "version": "1.0.0",
-  "description": "A simple project to demonstrate Node.js",
-  "main": "server.js",
+  "description": "A simple Node.js application",
+  "main": "app.js",
   "scripts": {
-
-    "start": "node server.js",
-    "test": "jest",
-    "test:coverage": "jest --coverage"
-    "build": "webpack --mode production"
+    "start": "node app.js",
+    "test": "jest --coverage",
+    "build": "webpack --config webpack.config.js"
   },
   "keywords": [],
-  "author": "Edwin Pacardo",
+  "author": "Your Name",
   "license": "ISC",
-  "devDependencies": {
-    "jest": "^29.7.0"
-  },
   "dependencies": {
-    "express": "^4.21.0"
+    "express": "^4.18.2",
+    "@aws-sdk/client-dynamodb": "^3.468.0",
+    "@aws-sdk/lib-dynamodb": "^3.468.0",
+    "@jest-mock/express": "^2.0.2",
+    "aws-sdk": "^2.1499.0",
+    "mock": "^0.1.1"
+  },
+  "devDependencies": {
+    "jest": "^26.6.0"
   }
 }
